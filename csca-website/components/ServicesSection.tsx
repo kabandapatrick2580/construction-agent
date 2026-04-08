@@ -2,7 +2,6 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import {
   MdLocationOn,
   MdGavel,
@@ -11,7 +10,11 @@ import {
   MdAnalytics,
   MdPayments,
   MdTaskAlt,
+  MdDirectionsCar,
+  MdAccessTime,
+  MdBusinessCenter,
 } from "react-icons/md";
+import ServiceCarousel from "./ServiceCarousel";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -22,7 +25,54 @@ const fadeUp = {
   }),
 };
 
-const services = [
+/* ── Image sets per service ─────────────────────────────────────────────── */
+const realEstateSlides = [
+  {
+    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCwmZvAsrCzC7Rq69Tasu7i5AWDSgpj_rjSduqXuoFb2iEoscIFq6yBVtCGvT1Z6Etwh502aBzMV0CWb7fwUu5_j6zHoM8rJUHvKmnEWwKa1r0xhCAix-OXZRjsTD0jmhJUvy3VMZFqUX09aMx8SZcgcJuQErPUCqF2L6LP8wOmscl6TwBw9Db6bJ6Ue7FiLldFgyh3D0DjAZH6tm-624QIeZtyB8v7qfq9NPriB-znByMkoSRN7F_wFaxXoJCv3MutlJN6cYBrvsT0",
+    alt: "Modern commercial building in Kigali",
+  },
+  {
+    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCCUFNTAUCBY1TgJUJKa5q6KIZF0KINyZIXIXwUUNF4_N4OPyMT7UtLTaaf1ojEtTcTdq98WBwszeps1Hyl4fbcGZiLwEFEHk-wghSybC0kc4V-_Gs2N-dEUTdpONsuG9bodXzNSoZzs4xFPfvK4f2eIvpw6RUKySYsgoM4dFJ1kaJsK8_1Unrk5FSlrBx4DL0xDEOJsko562dzCRMh03VnMlx07qLRTbJwkJFM23CTBF1ZkFoJB07uoVYpqLgiJzf6iU35NTCkg_iR",
+    alt: "Contemporary architecture facade",
+  },
+  {
+    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuB9g-wV6x9QIaOfdi17YYW4agPKcvmLN9Nzr8jktL2xv_hYzxUDH3f-Nt4JAfUgZaXWxcv7q3MPFO3oUdrA35u_5MuE3BXBs15a9RLkD3AqK5ZgGp9-curD6BfMZNwD6kNj0SJbvLU-lKAKnO9dYUW2sf3axGj53Y3cZla_X11QTYN7POHi9EYVw90drD_Mh8lcDy6EC7pZe_qOu9iMYJGTblPnewwLUdxMmp7uhvw0Kb1D3rW0huVYTthKQ0r5xP0fWqSiqpQ2Y9Zf",
+    alt: "Steel structure — real estate development",
+  },
+];
+
+const constructionSlides = [
+  {
+    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDN6lBdMK49GgITv7vixwwwbhEIFMgJT3oauEjXZhUvb_CvbdbAk127OaiCgBkaVDnZ9OLKqRDPEe2nh0czQO_CCY3aalcOTfHz2ITicnqMuC-eqHh7EwrRDtVobidOvjvFx6kbA8zV4t6bNXz9ubN6JGSkASDyBrpNiMBXDNlOTbt0sqOHm8VBH4SZZMRz61Gr3hq9eoApWAP4FTNzfklnKpqaOO9RjhPvznUaPG4xu4Lg0AFRoPHaE_ciJIkGTIjgXn356m4q_Qnt",
+    alt: "Construction worker reviewing blueprints",
+  },
+  {
+    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCCUFNTAUCBY1TgJUJKa5q6KIZF0KINyZIXIXwUUNF4_N4OPyMT7UtLTaaf1ojEtTcTdq98WBwszeps1Hyl4fbcGZiLwEFEHk-wghSybC0kc4V-_Gs2N-dEUTdpONsuG9bodXzNSoZzs4xFPfvK4f2eIvpw6RUKySYsgoM4dFJ1kaJsK8_1Unrk5FSlrBx4DL0xDEOJsko562dzCRMh03VnMlx07qLRTbJwkJFM23CTBF1ZkFoJB07uoVYpqLgiJzf6iU35NTCkg_iR",
+    alt: "Building under construction",
+  },
+  {
+    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuB9g-wV6x9QIaOfdi17YYW4agPKcvmLN9Nzr8jktL2xv_hYzxUDH3f-Nt4JAfUgZaXWxcv7q3MPFO3oUdrA35u_5MuE3BXBs15a9RLkD3AqK5ZgGp9-curD6BfMZNwD6kNj0SJbvLU-lKAKnO9dYUW2sf3axGj53Y3cZla_X11QTYN7POHi9EYVw90drD_Mh8lcDy6EC7pZe_qOu9iMYJGTblPnewwLUdxMmp7uhvw0Kb1D3rW0huVYTthKQ0r5xP0fWqSiqpQ2Y9Zf",
+    alt: "Construction materials and supply chain",
+  },
+];
+
+const vehicleSlides = [
+  {
+    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCwmZvAsrCzC7Rq69Tasu7i5AWDSgpj_rjSduqXuoFb2iEoscIFq6yBVtCGvT1Z6Etwh502aBzMV0CWb7fwUu5_j6zHoM8rJUHvKmnEWwKa1r0xhCAix-OXZRjsTD0jmhJUvy3VMZFqUX09aMx8SZcgcJuQErPUCqF2L6LP8wOmscl6TwBw9Db6bJ6Ue7FiLldFgyh3D0DjAZH6tm-624QIeZtyB8v7qfq9NPriB-znByMkoSRN7F_wFaxXoJCv3MutlJN6cYBrvsT0",
+    alt: "Professional vehicle fleet",
+  },
+  {
+    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDN6lBdMK49GgITv7vixwwwbhEIFMgJT3oauEjXZhUvb_CvbdbAk127OaiCgBkaVDnZ9OLKqRDPEe2nh0czQO_CCY3aalcOTfHz2ITicnqMuC-eqHh7EwrRDtVobidOvjvFx6kbA8zV4t6bNXz9ubN6JGSkASDyBrpNiMBXDNlOTbt0sqOHm8VBH4SZZMRz61Gr3hq9eoApWAP4FTNzfklnKpqaOO9RjhPvznUaPG4xu4Lg0AFRoPHaE_ciJIkGTIjgXn356m4q_Qnt",
+    alt: "Business vehicle rental Kigali",
+  },
+  {
+    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCCUFNTAUCBY1TgJUJKa5q6KIZF0KINyZIXIXwUUNF4_N4OPyMT7UtLTaaf1ojEtTcTdq98WBwszeps1Hyl4fbcGZiLwEFEHk-wghSybC0kc4V-_Gs2N-dEUTdpONsuG9bodXzNSoZzs4xFPfvK4f2eIvpw6RUKySYsgoM4dFJ1kaJsK8_1Unrk5FSlrBx4DL0xDEOJsko562dzCRMh03VnMlx07qLRTbJwkJFM23CTBF1ZkFoJB07uoVYpqLgiJzf6iU35NTCkg_iR",
+    alt: "Corporate fleet leasing solutions",
+  },
+];
+
+/* ── Summary cards ──────────────────────────────────────────────────────── */
+const serviceCards = [
   {
     key: "realEstate",
     icon: (
@@ -57,7 +107,8 @@ export default function ServicesSection() {
   return (
     <section id="services" className="py-24 bg-[#f3f3f3] architectural-grid">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Header */}
+
+        {/* ── Header ─────────────────────────────────────────────────────── */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -76,9 +127,9 @@ export default function ServicesSection() {
           <div className="h-[2px] bg-[#c3c6cf] w-24 mb-4 hidden md:block" />
         </motion.div>
 
-        {/* Service Cards */}
+        {/* ── Summary Cards ──────────────────────────────────────────────── */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-          {services.map((service, i) => (
+          {serviceCards.map((service, i) => (
             <motion.div
               key={service.key}
               custom={i}
@@ -112,7 +163,7 @@ export default function ServicesSection() {
           ))}
         </div>
 
-        {/* Real Estate Detail */}
+        {/* ── Real Estate Detail ─────────────────────────────────────────── */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -120,26 +171,24 @@ export default function ServicesSection() {
           transition={{ duration: 0.7 }}
           className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20 py-12 border-t border-[#e2e2e2]"
         >
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[400px]">
-            <Image
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwmZvAsrCzC7Rq69Tasu7i5AWDSgpj_rjSduqXuoFb2iEoscIFq6yBVtCGvT1Z6Etwh502aBzMV0CWb7fwUu5_j6zHoM8rJUHvKmnEWwKa1r0xhCAix-OXZRjsTD0jmhJUvy3VMZFqUX09aMx8SZcgcJuQErPUCqF2L6LP8wOmscl6TwBw9Db6bJ6Ue7FiLldFgyh3D0DjAZH6tm-624QIeZtyB8v7qfq9NPriB-znByMkoSRN7F_wFaxXoJCv3MutlJN6cYBrvsT0"
-              alt="Real estate building"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
-            <div className="absolute -bottom-4 -right-4 bg-[#2BB1E4] p-6 rounded-xl text-white hidden md:block z-10">
-              <div className="text-3xl font-black font-headline">15+</div>
-              <div className="text-xs uppercase tracking-widest font-bold opacity-80 mt-1">Years Experience</div>
-            </div>
-          </div>
+          {/* Carousel */}
+          <ServiceCarousel
+            slides={realEstateSlides}
+            interval={4000}
+            badge={{ value: "15+", label: "Years Experience" }}
+            aspectClass="h-[400px]"
+          />
+
+          {/* Text */}
           <div className="space-y-6">
             <div className="w-12 h-[2px] bg-[#2BB1E4]" />
             <h2 className="text-3xl font-headline font-extrabold text-[#093051]">
               {t("realEstate.title")}
             </h2>
             <p className="text-[#43474e] leading-relaxed">
-              Strategic property acquisition and management tailored for the Rwandan commercial landscape. Our team understands the nuances of the Kigali master plan, ensuring your investments are positioned for long-term growth.
+              Strategic property acquisition and management tailored for the Rwandan commercial
+              landscape. Our team understands the nuances of the Kigali master plan, ensuring your
+              investments are positioned for long-term growth.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
@@ -157,24 +206,36 @@ export default function ServicesSection() {
                 </div>
               ))}
             </div>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 bg-[#093051] text-white px-6 py-3 rounded-xl font-headline font-bold text-sm hover:bg-[#2BB1E4] transition-colors duration-200"
+            >
+              Enquire About Properties
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
           </div>
         </motion.div>
 
-        {/* Construction Detail */}
+        {/* ── Construction Detail ────────────────────────────────────────── */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center py-12 border-t border-[#e2e2e2]"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20 py-12 border-t border-[#e2e2e2]"
         >
+          {/* Text — left on desktop */}
           <div className="order-2 lg:order-1 space-y-6">
             <div className="w-12 h-[2px] bg-[#2BB1E4]" />
             <h2 className="text-3xl font-headline font-extrabold text-[#093051]">
               {t("construction.title")}
             </h2>
             <p className="text-[#43474e] leading-relaxed">
-              Complexity in construction starts with the supply chain. We eliminate bottlenecks by acting as your dedicated procurement office, managing everything from bulk cement to specialized electrical components.
+              Complexity in construction starts with the supply chain. We eliminate bottlenecks by
+              acting as your dedicated procurement office, managing everything from bulk cement to
+              specialized electrical components.
             </p>
             <div className="space-y-3">
               {[
@@ -187,32 +248,127 @@ export default function ServicesSection() {
                   className="bg-white p-5 rounded-xl border-l-4 border-[#2BB1E4] flex justify-between items-center shadow-sm hover:shadow-md transition-all group cursor-default"
                 >
                   <span className="font-bold text-[#093051]">{item.label}</span>
-                  <span className="text-[#2BB1E4] group-hover:translate-x-1 transition-transform duration-200">{item.icon}</span>
+                  <span className="text-[#2BB1E4] group-hover:translate-x-1 transition-transform duration-200">
+                    {item.icon}
+                  </span>
                 </div>
               ))}
             </div>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 bg-[#093051] text-white px-6 py-3 rounded-xl font-headline font-bold text-sm hover:bg-[#2BB1E4] transition-colors duration-200"
+            >
+              Request Supply Quote
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
           </div>
+
+          {/* Carousel — right on desktop */}
           <div className="order-1 lg:order-2">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="rounded-2xl overflow-hidden shadow-lg h-72 mt-10">
-                <Image
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN6lBdMK49GgITv7vixwwwbhEIFMgJT3oauEjXZhUvb_CvbdbAk127OaiCgBkaVDnZ9OLKqRDPEe2nh0czQO_CCY3aalcOTfHz2ITicnqMuC-eqHh7EwrRDtVobidOvjvFx6kbA8zV4t6bNXz9ubN6JGSkASDyBrpNiMBXDNlOTbt0sqOHm8VBH4SZZMRz61Gr3hq9eoApWAP4FTNzfklnKpqaOO9RjhPvznUaPG4xu4Lg0AFRoPHaE_ciJIkGTIjgXn356m4q_Qnt"
-                  alt="Construction worker"
-                  width={300}
-                  height={288}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="rounded-2xl bg-[#093051] p-6 flex flex-col justify-center text-white h-72">
-                <div className="text-4xl font-black font-headline mb-2">200+</div>
-                <div className="text-xs uppercase tracking-widest text-[#2BB1E4] font-bold">Projects Delivered</div>
-                <div className="mt-4 text-sm text-slate-300 leading-relaxed">
-                  Across real estate, construction, and vehicle services in Rwanda.
+            <ServiceCarousel
+              slides={constructionSlides}
+              interval={4500}
+              badge={{ value: "200+", label: "Projects Delivered" }}
+              aspectClass="h-[400px]"
+            />
+          </div>
+        </motion.div>
+
+        {/* ── Vehicle / Car Rental & Leasing Detail ─────────────────────── */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="py-12 border-t border-[#e2e2e2]"
+        >
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Carousel */}
+            <ServiceCarousel
+              slides={vehicleSlides}
+              interval={5000}
+              aspectClass="h-[400px]"
+            />
+
+            {/* Text */}
+            <div className="space-y-6">
+              <div className="w-12 h-[2px] bg-[#2BB1E4]" />
+              <h2 className="text-3xl font-headline font-extrabold text-[#093051]">
+                {t("vehicle.title")}
+              </h2>
+              <p className="text-[#43474e] leading-relaxed">{t("vehicle.description")}</p>
+
+              {/* Rental & Leasing sub-sections */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                {/* Rental */}
+                <div className="bg-white rounded-2xl p-6 shadow-sm border border-[#e2e2e2] space-y-3">
+                  <div className="flex items-center gap-2 text-[#093051] font-headline font-bold">
+                    <MdDirectionsCar className="w-5 h-5 text-[#2BB1E4]" />
+                    {t("vehicle.rental.title")}
+                  </div>
+                  <ul className="space-y-2">
+                    {(t.raw("vehicle.rental.items") as string[]).map((item: string) => (
+                      <li key={item} className="flex items-start gap-2 text-sm text-[#43474e]">
+                        <svg className="w-4 h-4 text-[#2BB1E4] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Leasing */}
+                <div className="bg-[#093051] rounded-2xl p-6 shadow-sm space-y-3">
+                  <div className="flex items-center gap-2 text-white font-headline font-bold">
+                    <MdAccessTime className="w-5 h-5 text-[#2BB1E4]" />
+                    {t("vehicle.leasing.title")}
+                  </div>
+                  <ul className="space-y-2">
+                    {(t.raw("vehicle.leasing.items") as string[]).map((item: string) => (
+                      <li key={item} className="flex items-start gap-2 text-sm text-slate-300">
+                        <svg className="w-4 h-4 text-[#2BB1E4] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
+
+              {/* Fleet badge row */}
+              <div className="flex flex-wrap gap-3 pt-1">
+                {[
+                  { icon: <MdDirectionsCar className="w-4 h-4" />, label: "Short-term Rental" },
+                  { icon: <MdAccessTime className="w-4 h-4" />, label: "Long-term Leasing" },
+                  { icon: <MdBusinessCenter className="w-4 h-4" />, label: "Corporate Fleet" },
+                ].map((badge) => (
+                  <div
+                    key={badge.label}
+                    className="inline-flex items-center gap-1.5 bg-[#2BB1E4]/10 border border-[#2BB1E4]/30 text-[#093051] text-xs font-semibold px-3 py-1.5 rounded-full"
+                  >
+                    <span className="text-[#2BB1E4]">{badge.icon}</span>
+                    {badge.label}
+                  </div>
+                ))}
+              </div>
+
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-2 bg-[#093051] text-white px-6 py-3 rounded-xl font-headline font-bold text-sm hover:bg-[#2BB1E4] transition-colors duration-200"
+              >
+                Book a Vehicle
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
             </div>
           </div>
         </motion.div>
+
       </div>
     </section>
   );
