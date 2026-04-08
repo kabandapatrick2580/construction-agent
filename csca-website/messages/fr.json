@@ -1,0 +1,147 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "about": "À propos",
+    "process": "Processus",
+    "contact": "Contact",
+    "getQuote": "Obtenir un devis"
+  },
+  "hero": {
+    "headline": "Solutions fiables en immobilier, construction et location de véhicules à Kigali, Rwanda",
+    "subheadline": "Construction Supply and Commission Agent Ltd offre des services de confiance en immobilier, construction, location et crédit-bail de véhicules — aidant les particuliers et les entreprises à avancer avec assurance.",
+    "cta_primary": "Obtenir un devis",
+    "cta_secondary": "Contactez-nous"
+  },
+  "about": {
+    "title": "À propos de nous",
+    "content": "Construction Supply and Commission Agent Ltd est une société basée à Kigali offrant des services professionnels en immobilier, construction et solutions de location de véhicules. Nous travaillons avec des particuliers, des entreprises et des organisations pour fournir des services fiables, pratiques et bien coordonnés adaptés aux besoins du marché local.",
+    "content2": "Notre approche est fondée sur la confiance, l'efficacité et une solide exécution. Qu'il s'agisse de transactions immobilières, de projets de construction ou de services de location de véhicules, nous nous concentrons sur la création de valeur et de relations à long terme."
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Solutions intégrées pour les environnements bâtis",
+    "label": "Notre expertise principale",
+    "realEstate": {
+      "title": "Solutions immobilières",
+      "description": "Acquisition et gestion stratégiques de propriétés adaptées au paysage commercial rwandais.",
+      "items": [
+        "Support à la recherche et à l'acquisition de propriétés",
+        "Annonces foncières et immobilières",
+        "Services d'agence et de commission immobilières",
+        "Conseils en investissement",
+        "Visites de sites et coordination immobilière"
+      ]
+    },
+    "construction": {
+      "title": "Fournitures de construction",
+      "description": "Approvisionnement en matériaux premium et composants structurels auprès d'un réseau mondial de fournisseurs vérifiés.",
+      "items": [
+        "Support aux projets de construction",
+        "Approvisionnement et fourniture de matériaux de construction",
+        "Coordination des entrepreneurs",
+        "Assistance à la supervision de chantier",
+        "Support à la planification de projets"
+      ]
+    },
+    "vehicle": {
+      "title": "Location et crédit-bail de voitures",
+      "description": "Solutions flexibles de location de véhicules et de crédit-bail à long terme pour les projets de construction et la gestion de flotte d'entreprise.",
+      "rental": {
+        "title": "Services de location de voitures",
+        "items": [
+          "Locations de voitures à court et long terme",
+          "Solutions de location pour professionnels et particuliers",
+          "Forfaits de location flexibles"
+        ]
+      },
+      "leasing": {
+        "title": "Services de crédit-bail de voitures",
+        "items": [
+          "Crédit-bail à long terme pour particuliers et entreprises",
+          "Solutions de crédit-bail de flotte",
+          "Options de crédit-bail abordables et structurées"
+        ]
+      },
+      "items": [
+        "Location de voitures à court et long terme",
+        "Solutions de crédit-bail de flotte",
+        "Forfaits de location et crédit-bail flexibles"
+      ]
+    }
+  },
+  "why": {
+    "title": "Pourquoi nous choisir",
+    "items": [
+      "Forte expertise locale à Kigali et au Rwanda",
+      "Service fiable et professionnel",
+      "Communication transparente",
+      "Capacité multi-services sous une seule entreprise",
+      "Solutions flexibles adaptées aux besoins des clients"
+    ]
+  },
+  "process": {
+    "title": "Notre processus",
+    "subtitle": "Comment nous travaillons",
+    "steps": [
+      {
+        "title": "Consultation",
+        "description": "Nous commençons par une consultation détaillée pour comprendre vos objectifs et vos besoins."
+      },
+      {
+        "title": "Analyse des besoins",
+        "description": "Notre équipe analyse vos besoins et identifie la meilleure approche pour votre projet."
+      },
+      {
+        "title": "Planification et proposition",
+        "description": "Nous développons un plan complet et présentons une proposition sur mesure pour votre examen."
+      },
+      {
+        "title": "Exécution",
+        "description": "Nos professionnels exécutent le plan avec précision, qualité et dans les délais."
+      },
+      {
+        "title": "Suivi et support",
+        "description": "Nous fournissons un soutien continu et un suivi pour assurer une satisfaction totale."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Entrer en contact",
+    "company": "Construction Supply and Commission Agent Ltd",
+    "director": "Directeur Général: NTAKIRUTIMANA Theogene",
+    "phone": "Téléphone",
+    "email": "E-mail",
+    "location": "Emplacement",
+    "location_value": "Kigali, Rwanda",
+    "form": {
+      "name": "Nom complet",
+      "email": "Adresse e-mail",
+      "phone": "Numéro de téléphone",
+      "service": "Service d'intérêt",
+      "message": "Message",
+      "submit": "Envoyer le message",
+      "success": "Votre message a été envoyé avec succès. Nous vous répondrons bientôt.",
+      "services": {
+        "realEstate": "Immobilier",
+        "construction": "Construction",
+        "carRental": "Location de voiture",
+        "carLeasing": "Crédit-bail de voiture",
+        "other": "Autre"
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Solutions immobilières, de construction et de véhicules de confiance à Kigali, Rwanda.",
+    "rights": "Tous droits réservés.",
+    "links": {
+      "title": "Liens rapides"
+    }
+  },
+  "cookie": {
+    "message": "Nous utilisons des cookies pour améliorer votre expérience et analyser le trafic du site. En continuant, vous acceptez notre politique de cookies.",
+    "accept": "Accepter",
+    "reject": "Refuser"
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "nav": {
+    "home": "Ahabanza",
+    "services": "Serivisi",
+    "about": "Ibyerekeye",
+    "process": "Inzira",
+    "contact": "Twandikire",
+    "getQuote": "Baza igiciro"
+  },
+  "hero": {
+    "headline": "Tuzobereye mu gutanga serivisi zo kuranga no kugurisha Amazu n'ibibanza, ubwubatsi no gukodesha imodoka i Kigali, Rwanda",
+    "subheadline": "Construction Supply and Commission Agent Ltd itanga serivisi zizewe mu kuranga Amazu n'ibibanza, ubwubatsi, no gukodesha imodoka — ifasha abantu bwite n'ibigo by'ubucuruzi guteza imbere imirimo yabo.",
+    "cta_primary": "Baza igiciro",
+    "cta_secondary": "Twandikire"
+  },
+  "about": {
+    "title": "Ibyerekeye CSCA",
+    "content": "Construction Supply and Commission Agent Ltd ni sosiyete ikorera i Kigali itanga serivisi za kinyamwuga mu kuranga no kugurisha amazu n'ibibanza, ubwubatsi no gukodesha imodoka. Dukorana n'abantu bwite, ibigo binini n'ibito mu gutanga serivisi zizewe, zikorwa neza kandi zihuye n'isoko ry'akarere.",
+    "content2": "Uburyo bwacu bushingiye ku cyizere, gukora neza no kubahiriza amasezerano. Dukorana n'abakiriya mu bikorwa byo kuranga/kugurisha amazu n'ibibanza, ubwubatsi cyangwa gukodesha imodoka, dukora ibikwiye kugira ngo haboneke agaciro n'ubufatanye bw'igihe kirekire."
+  },
+  "services": {
+    "title": "Serivisi Zacu",
+    "subtitle": "Ibisubizo bihuye n'ibikenewe",
+    "label": "Ibyo tuzobereyemo",
+    "realEstate": {
+      "title": "Kuranga no Kugurisha Amazu n'ibibanza",
+      "description": "Gufata no gucunga imitungo mu buryo bwiza buhuye n'isoko ry'u Rwanda.",
+      "items": [
+        "Ihererekanya ry'ibibanza n'amazu rinyuze mu mucyo",
+        "Gutangaza ubutaka n'amazu",
+        "Serivisi z'agenti w'imitungo n'ubucuruzi",
+        "Ibyerekeranye ishoramari",
+        "Gusura aho imitungo iri no guhuza amakuru ajyanye nayo"
+      ]
+    },
+    "construction": {
+      "title": "Ibikoresho by'Ubwubatsi",
+      "description": "Gushakisha ibikoresho by'ubwubatsi biringaniye bishimwe n'abatuza b'inzobere ku isi hose.",
+      "items": [
+        "Ubujyanama mu bikorwa by'ubwubatsi",
+        "Gushakisha no gutanga ibikoresho by'ubwubatsi",
+        "Guhuza n'abakora imirimo",
+        "Kugenzura akazi kuri site z'ubwubatsi",
+        "Inkunga mu gutegura imishinga"
+      ]
+    },
+    "vehicle": {
+      "title": "Gukodesha Imodoka",
+      "description": "Gukodesha imodoka igihe gito n'amasezerano y'igihe kirekire no gucunga imikorere y'imodoka z'amasosiyete.",
+      "rental": {
+        "title": "Serivisi zo Gukodesha Imodoka",
+        "items": [
+          "Gukodesha imodoka mu gihe kigufi n'igihe kirekire",
+          "Gukodesha imodoka ku bikorwa by'ubucuruzi n'ibikorwa bwite"
+          
+        ]
+      },
+      "leasing": {
+        "title": "Serivisi zo gukodesha Imodoka",
+        "items": [
+          "Amasezerano y'igihe kirekire ku bantu bwite n'amasosiyete",
+          "Ibisubizo by'amasezerano y'imodoka",
+          "Amasezerano y'imodoka yishyurwa neza n'atunganywa"
+        ]
+      },
+      "items": [
+        "Gukodesha imodoka mu gihe gigufi n'igihe kirekire",
+        "Ibisubizo by'amasezerano y'ingasi y'imodoka",
+        "Amasezerano y'itangwa ahuye n'ibikenewe"
+      ]
+    }
+  },
+  "why": {
+    "title": "Impamvu yo Kuduhitamo",
+    "items": [
+      "Ubunararibonye ku isoko rya Kigali n'u Rwanda muri rusange",
+      "Gutanga serivisi mu mucyo kandi kinyamwuga",
+      "Itumanaho risobanutse",
+      "Ubushobozi bwo gutanga serivisi nyinshi nk'kigo kimwe",
+      "Ibisubizo bihuye n'ibyo abakiriya bakeneye"
+    ]
+  },
+  "process": {
+    "title": "Imikorere yacu",
+    "subtitle": "Uburyo Dukorana",
+    "steps": [
+      {
+        "title": "Ubujyanama",
+        "description": "Dutangira tugirana ikiganiro cyimbitse kugira ngo dusobanukirwe intego zawe n'ibyo ukeneye ngo zigerweho."
+      },
+      {
+        "title": "Gusesengura ibikenewe",
+        "description": "Itsinda ryacu rireba ibyo ukeneye kandi rigashaka uburyo bwiza bwo gushyira mu bikorwa umushinga wawe."
+      },
+      {
+        "title": "Gutegura no Gushaka igisubizo",
+        "description": "Dutegura mu buryo bunoze kandi tugashaka igisubizo gihuye n'ibyo ukeneye."
+      },
+      {
+        "title": "Gushyira mu Bikorwa",
+        "description": "Inzobere zacu zishyira mu bikorwa gahunda yateganyijwe mu buryo bwiza no mu gihe cyateganyijwe"
+      },
+      {
+        "title": "Gukurikirana no Gutanga ubufasha",
+        "description": "Dukurikirana kandi tugatanga ubufasha kugira ngo tumenye ko abakiriya bacu bayuzwe na serivisi twabahaye"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Twandikire",
+    "subtitle": "Tuganire",
+    "company": "Construction Supply and Commission Agent Ltd",
+    "director": "Umuyobozi Mukuru: NTAKIRUTIMANA Theogene",
+    "phone": "Telefoni",
+    "email": "Imeyili",
+    "location": "Aho Dukora",
+    "location_value": "Kigali, Rwanda",
+    "form": {
+      "name": "Izina Ryuzuye",
+      "email": "Aderesi y'Imeyili",
+      "phone": "Nomero ya Telefoni",
+      "service": "Serivisi Ushaka",
+      "message": "Ubutumwa",
+      "submit": "Ohereza Ubutumwa",
+      "success": "Ubutumwa bwawe bwoherejwe neza. Tuzagusubiza vuba.",
+      "services": {
+        "realEstate": "Imitungo",
+        "construction": "Ubwubatsi",
+        "carRental": "Gukodesha Imodoka",
+        "carLeasing": "Amasezerano y'Imodoka",
+        "other": "Ikindi"
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Serivisi zo kuranga no kugurisha amazu n'ibibanza, ubwubatsi no gukodesha imodoka i Kigali, Rwanda.",
+    "rights": "Uburenganzira bwose buhariwe.",
+    "links": {
+      "title": "Imitwe y'Inzira"
+    }
+  },
+  "cookie": {
+    "message": "Dukoresha cookies kugira ngo itangwa rya serivisi ryawe rinoze no gusesengura ubukirwa bw'urubuga. Mu gukomeza gukoresha, wemera amategeko yacu ya cookies.",
+    "accept": "Emera",
+    "reject": "Anga"
+  }
+}

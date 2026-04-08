@@ -1,0 +1,147 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "process": "Process",
+    "contact": "Contact",
+    "getQuote": "Get a Quote"
+  },
+  "hero": {
+    "headline": "Reliable Real Estate, Construction, and Vehicle Rental Solutions in Kigali, Rwanda",
+    "subheadline": "Construction Supply and Commission Agent Ltd delivers trusted services in real estate, construction, car rental, and leasing—helping individuals and businesses move forward with confidence.",
+    "cta_primary": "Get a Quote",
+    "cta_secondary": "Contact Us"
+  },
+  "about": {
+    "title": "About Us",
+    "content": "Construction Supply and Commission Agent Ltd is a Kigali-based company providing professional services in real estate, construction, and vehicle rental solutions. We work with individuals, businesses, and organizations to deliver reliable, practical, and well-coordinated services tailored to local market needs.",
+    "content2": "Our approach is built on trust, efficiency, and strong execution. Whether supporting property transactions, construction projects, or vehicle rental services, we focus on delivering value and long-term relationships."
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Integrated Solutions for Built Environments",
+    "label": "Our Core Expertise",
+    "realEstate": {
+      "title": "Real Estate Solutions",
+      "description": "Strategic property acquisition and management tailored for the Rwandan commercial landscape.",
+      "items": [
+        "Property sourcing and acquisition support",
+        "Land and property listing",
+        "Real estate agency and commission services",
+        "Investment guidance",
+        "Site visits and property coordination"
+      ]
+    },
+    "construction": {
+      "title": "Construction Supply",
+      "description": "Sourcing premium materials and structural components from a global network of vetted suppliers.",
+      "items": [
+        "Construction project support",
+        "Building material sourcing and supply",
+        "Contractor coordination",
+        "Site supervision assistance",
+        "Project planning support"
+      ]
+    },
+    "vehicle": {
+      "title": "Car Renting & Leasing",
+      "description": "Flexible vehicle rental and long-term leasing solutions for construction projects and corporate fleet management.",
+      "rental": {
+        "title": "Car Rental Services",
+        "items": [
+          "Short-term and long-term car rentals",
+          "Business and personal vehicle rental solutions",
+          "Flexible rental packages"
+        ]
+      },
+      "leasing": {
+        "title": "Car Leasing Services",
+        "items": [
+          "Long-term leasing for individuals and companies",
+          "Fleet leasing solutions",
+          "Affordable and structured leasing options"
+        ]
+      },
+      "items": [
+        "Short-term and long-term car rentals",
+        "Fleet leasing solutions",
+        "Flexible rental & leasing packages"
+      ]
+    }
+  },
+  "why": {
+    "title": "Why Choose Us",
+    "items": [
+      "Strong local expertise in Kigali and Rwanda",
+      "Reliable and professional service delivery",
+      "Transparent communication",
+      "Multi-service capability under one company",
+      "Flexible solutions tailored to client needs"
+    ]
+  },
+  "process": {
+    "title": "Our Process",
+    "subtitle": "How We Work",
+    "steps": [
+      {
+        "title": "Consultation",
+        "description": "We begin with a detailed consultation to understand your goals and requirements."
+      },
+      {
+        "title": "Requirement Analysis",
+        "description": "Our team analyzes your needs and identifies the best approach for your project."
+      },
+      {
+        "title": "Planning & Proposal",
+        "description": "We develop a comprehensive plan and present a tailored proposal for your review."
+      },
+      {
+        "title": "Execution",
+        "description": "Our professionals execute the plan with precision, quality, and timeliness."
+      },
+      {
+        "title": "Follow-up & Support",
+        "description": "We provide ongoing support and follow-up to ensure complete satisfaction."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in Touch",
+    "company": "Construction Supply and Commission Agent Ltd",
+    "director": "Managing Director: NTAKIRUTIMANA Theogene",
+    "phone": "Phone",
+    "email": "Email",
+    "location": "Location",
+    "location_value": "Kigali, Rwanda",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "service": "Service of Interest",
+      "message": "Message",
+      "submit": "Send Message",
+      "success": "Your message has been sent successfully. We will get back to you soon.",
+      "services": {
+        "realEstate": "Real Estate",
+        "construction": "Construction",
+        "carRental": "Car Rental",
+        "carLeasing": "Car Leasing",
+        "other": "Other"
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Trusted real estate, construction, and vehicle solutions in Kigali, Rwanda.",
+    "rights": "All rights reserved.",
+    "links": {
+      "title": "Quick Links"
+    }
+  },
+  "cookie": {
+    "message": "We use cookies to improve your experience and analyze site traffic. By continuing, you agree to our cookie policy.",
+    "accept": "Accept",
+    "reject": "Reject"
+  }
+}

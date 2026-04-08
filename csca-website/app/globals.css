@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Brand Colors */
+  --color-primary: #093051;
+  --color-accent: #2BB1E4;
+  --color-background: #FFFFFF;
+  --color-surface: #F2F2F2;
+
+  /* Design-system colors from HTML */
+  --color-primary-container: #093051;
+  --color-secondary-container: #2BB1E4;
+  --color-secondary: #006687;
+  --color-on-primary: #ffffff;
+  --color-on-surface: #1a1c1c;
+  --color-on-surface-variant: #43474e;
+  --color-surface-container-low: #f3f3f3;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container: #eeeeee;
+  --color-outline-variant: #c3c6cf;
+  --color-error: #ba1a1a;
+
+  /* Fonts */
+  --font-headline: "Manrope", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-on-surface);
+    font-family: var(--font-body);
+  }
+
+  [dir="rtl"] {
+    font-family: var(--font-body), "Segoe UI", Tahoma, sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-headline {
+    font-family: var(--font-headline);
+  }
+  .font-body {
+    font-family: var(--font-body);
+  }
+  .architectural-grid {
+    background-image: radial-gradient(
+      circle at 2px 2px,
+      rgba(9, 48, 81, 0.05) 1px,
+      transparent 0
+    );
+    background-size: 40px 40px;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .text-primary-container {
+    color: var(--color-primary-container);
+  }
+  .text-secondary-container {
+    color: var(--color-secondary-container);
+  }
+  .text-secondary {
+    color: var(--color-secondary);
+  }
+  .bg-primary-container {
+    background-color: var(--color-primary-container);
+  }
+  .bg-secondary-container {
+    background-color: var(--color-secondary-container);
+  }
+  .bg-secondary {
+    background-color: var(--color-secondary);
+  }
+  .bg-surface-container-low {
+    background-color: var(--color-surface-container-low);
+  }
+  .bg-surface-container-lowest {
+    background-color: var(--color-surface-container-lowest);
+  }
+  .border-secondary {
+    border-color: var(--color-secondary);
+  }
+  .border-primary-container {
+    border-color: var(--color-primary-container);
+  }
+  .text-on-surface-variant {
+    color: var(--color-on-surface-variant);
+  }
+}
