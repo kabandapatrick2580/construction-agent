@@ -14,6 +14,7 @@ const fadeUp = {
 
 export default function HeroSection() {
   const t = useTranslations("hero");
+  const tUi = useTranslations("ui");
 
   return (
     <section
@@ -100,9 +101,9 @@ export default function HeroSection() {
           className="flex flex-wrap justify-center gap-12 pt-6 border-t border-white/10 w-full max-w-lg"
         >
           {[
-            { value: "15+", label: "Years Experience" },
-            { value: "200+", label: "Projects Completed" },
-            { value: "3", label: "Service Domains" },
+            { value: "15+", label: tUi("yearsExperience") },
+            { value: "200+", label: tUi("projectsCompleted") },
+            { value: "3", label: tUi("serviceDomains") },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="text-3xl font-headline font-black text-[#2BB1E4]">{stat.value}</div>
@@ -119,7 +120,7 @@ export default function HeroSection() {
         transition={{ delay: 1.5, duration: 0.5 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2"
       >
-        <span className="text-white/40 text-xs uppercase tracking-widest">Scroll</span>
+        <span className="text-white/40 text-xs uppercase tracking-widest">{tUi("scroll")}</span>
         <div className="w-px h-8 bg-gradient-to-b from-white/40 to-transparent animate-pulse" />
       </motion.div>
     </section>

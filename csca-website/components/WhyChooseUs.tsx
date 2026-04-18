@@ -13,6 +13,7 @@ const icons = [
 
 export default function WhyChooseUs() {
   const t = useTranslations("why");
+  const tUi = useTranslations("ui");
   const items = t.raw("items") as string[];
 
   return (
@@ -28,7 +29,7 @@ export default function WhyChooseUs() {
           className="text-center mb-16"
         >
           <span className="text-[#2BB1E4] font-headline font-bold tracking-widest text-sm uppercase">
-            Our Advantage
+            {tUi("ourAdvantage")}
           </span>
           <h2 className="text-4xl md:text-5xl font-headline font-bold mt-4 text-white">
             {t("title")}

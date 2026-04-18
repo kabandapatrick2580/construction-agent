@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 export default function AboutSection() {
   const t = useTranslations("about");
   const tWhy = useTranslations("why");
+  const tUi = useTranslations("ui");
 
   return (
     <section id="about" className="py-24 bg-white overflow-hidden">
@@ -29,9 +30,9 @@ export default function AboutSection() {
                 </div>
                 <div className="border-t border-white/20 pt-6 grid grid-cols-3 gap-4 text-center">
                   {[
-                    { v: "15+", l: "Years" },
-                    { v: "200+", l: "Projects" },
-                    { v: "3", l: "Domains" },
+                    { v: "15+", l: tUi("years") },
+                    { v: "200+", l: tUi("projects") },
+                    { v: "3", l: tUi("domains") },
                   ].map((s) => (
                     <div key={s.l}>
                       <div className="text-2xl font-black text-[#2BB1E4] font-headline">{s.v}</div>
@@ -45,7 +46,7 @@ export default function AboutSection() {
             {/* Floating badge */}
             <div className="absolute -bottom-6 -right-6 bg-[#2BB1E4] text-[#093051] rounded-xl p-5 shadow-xl">
               <div className="text-2xl font-black font-headline">Kigali</div>
-              <div className="text-xs font-bold uppercase tracking-widest mt-1">Rwanda Based</div>
+              <div className="text-xs font-bold uppercase tracking-widest mt-1">{tUi("rwandaBased")}</div>
             </div>
 
             {/* Accent dot grid */}
@@ -68,7 +69,7 @@ export default function AboutSection() {
           >
             <div>
               <span className="text-[#006687] font-headline font-bold tracking-widest text-sm uppercase">
-                Who We Are
+                {tUi("whoWeAre")}
               </span>
               <h2 className="text-4xl font-headline font-extrabold text-[#093051] mt-3 leading-tight">
                 {t("title")}
@@ -101,7 +102,7 @@ export default function AboutSection() {
               </div>
               <div>
                 <div className="font-bold text-[#093051] font-headline">NTAKIRUTIMANA Theogene</div>
-                <div className="text-sm text-[#43474e]">Managing Director, CSCA Ltd</div>
+                <div className="text-sm text-[#43474e]">{tUi("managingDirector")}</div>
               </div>
             </div>
           </motion.div>

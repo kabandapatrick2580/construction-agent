@@ -103,6 +103,7 @@ const serviceCards = [
 
 export default function ServicesSection() {
   const t = useTranslations("services");
+  const tUi = useTranslations("ui");
 
   return (
     <section id="services" className="py-24 bg-[#f3f3f3] architectural-grid">
@@ -175,7 +176,7 @@ export default function ServicesSection() {
           <ServiceCarousel
             slides={realEstateSlides}
             interval={4000}
-            badge={{ value: "15+", label: "Years Experience" }}
+            badge={{ value: "15+", label: tUi("yearsExperience") }}
             aspectClass="h-[400px]"
           />
 
@@ -186,16 +187,14 @@ export default function ServicesSection() {
               {t("realEstate.title")}
             </h2>
             <p className="text-[#43474e] leading-relaxed">
-              Strategic property acquisition and management tailored for the Rwandan commercial
-              landscape. Our team understands the nuances of the Kigali master plan, ensuring your
-              investments are positioned for long-term growth.
+              {tUi("realEstateDetailDesc")}
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { icon: <MdLocationOn className="w-5 h-5" />, title: "Market Analysis", desc: "Data-driven insights for property valuation." },
-                { icon: <MdGavel className="w-5 h-5" />, title: "Legal Compliance", desc: "Seamless transfer and title deed services." },
-                { icon: <MdHandshake className="w-5 h-5" />, title: "Joint Ventures", desc: "Connecting land owners with developers." },
-                { icon: <MdVerified className="w-5 h-5" />, title: "Quality Audit", desc: "Rigorous structural vetting of all listings." },
+                { icon: <MdLocationOn className="w-5 h-5" />, title: tUi("marketAnalysis"), desc: tUi("marketAnalysisDesc") },
+                { icon: <MdGavel className="w-5 h-5" />, title: tUi("legalCompliance"), desc: tUi("legalComplianceDesc") },
+                { icon: <MdHandshake className="w-5 h-5" />, title: tUi("jointVentures"), desc: tUi("jointVenturesDesc") },
+                { icon: <MdVerified className="w-5 h-5" />, title: tUi("qualityAudit"), desc: tUi("qualityAuditDesc") },
               ].map((item) => (
                 <div key={item.title} className="flex gap-3">
                   <span className="text-[#2BB1E4] shrink-0 mt-0.5">{item.icon}</span>
@@ -210,7 +209,7 @@ export default function ServicesSection() {
               href="#contact"
               className="inline-flex items-center gap-2 bg-[#093051] text-white px-6 py-3 rounded-xl font-headline font-bold text-sm hover:bg-[#2BB1E4] transition-colors duration-200"
             >
-              Enquire About Properties
+              {tUi("enquireProperties")}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -233,15 +232,13 @@ export default function ServicesSection() {
               {t("construction.title")}
             </h2>
             <p className="text-[#43474e] leading-relaxed">
-              Complexity in construction starts with the supply chain. We eliminate bottlenecks by
-              acting as your dedicated procurement office, managing everything from bulk cement to
-              specialized electrical components.
+              {tUi("constructionDetailDesc")}
             </p>
             <div className="space-y-3">
               {[
-                { label: "Advanced Material Tracking", icon: <MdAnalytics className="w-5 h-5" /> },
-                { label: "Bulk Procurement Pricing", icon: <MdPayments className="w-5 h-5" /> },
-                { label: "Regulatory Certification", icon: <MdTaskAlt className="w-5 h-5" /> },
+                { label: tUi("advancedTracking"), icon: <MdAnalytics className="w-5 h-5" /> },
+                { label: tUi("bulkPricing"), icon: <MdPayments className="w-5 h-5" /> },
+                { label: tUi("regulatoryCert"), icon: <MdTaskAlt className="w-5 h-5" /> },
               ].map((item) => (
                 <div
                   key={item.label}
@@ -258,7 +255,7 @@ export default function ServicesSection() {
               href="#contact"
               className="inline-flex items-center gap-2 bg-[#093051] text-white px-6 py-3 rounded-xl font-headline font-bold text-sm hover:bg-[#2BB1E4] transition-colors duration-200"
             >
-              Request Supply Quote
+              {tUi("requestQuote")}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -270,7 +267,7 @@ export default function ServicesSection() {
             <ServiceCarousel
               slides={constructionSlides}
               interval={4500}
-              badge={{ value: "200+", label: "Projects Delivered" }}
+              badge={{ value: "200+", label: tUi("projectsDelivered") }}
               aspectClass="h-[400px]"
             />
           </div>
@@ -342,9 +339,9 @@ export default function ServicesSection() {
               {/* Fleet badge row */}
               <div className="flex flex-wrap gap-3 pt-1">
                 {[
-                  { icon: <MdDirectionsCar className="w-4 h-4" />, label: "Short-term Rental" },
-                  { icon: <MdAccessTime className="w-4 h-4" />, label: "Long-term Leasing" },
-                  { icon: <MdBusinessCenter className="w-4 h-4" />, label: "Corporate Fleet" },
+                  { icon: <MdDirectionsCar className="w-4 h-4" />, label: tUi("shortTermRental") },
+                  { icon: <MdAccessTime className="w-4 h-4" />, label: tUi("longTermLeasing") },
+                  { icon: <MdBusinessCenter className="w-4 h-4" />, label: tUi("corporateFleet") },
                 ].map((badge) => (
                   <div
                     key={badge.label}
@@ -360,7 +357,7 @@ export default function ServicesSection() {
                 href="#contact"
                 className="inline-flex items-center gap-2 bg-[#093051] text-white px-6 py-3 rounded-xl font-headline font-bold text-sm hover:bg-[#2BB1E4] transition-colors duration-200"
               >
-                Book a Vehicle
+                {tUi("bookVehicle")}
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>

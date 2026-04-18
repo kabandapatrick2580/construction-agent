@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 
 export default function ContactSection() {
   const t = useTranslations("contact");
+  const tUi = useTranslations("ui");
 
   const contactInfo = [
     {
@@ -75,9 +76,9 @@ export default function ContactSection() {
           <div className="relative z-10 p-10 md:p-14">
             {/* Top: intro */}
             <div className="mb-10">
-              <h3 className="text-2xl font-headline font-bold text-white mb-2">Get In Touch</h3>
+              <h3 className="text-2xl font-headline font-bold text-white mb-2">{tUi("getInTouch")}</h3>
               <p className="text-slate-300 leading-relaxed max-w-lg">
-                Ready to start your project? Reach out to us and our team will get back to you within 24 hours.
+                {tUi("getInTouchBlurb")}
               </p>
             </div>
 
@@ -104,9 +105,9 @@ export default function ContactSection() {
             <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
               {/* Hours */}
               <div>
-                <p className="text-xs text-slate-400 uppercase tracking-wider font-bold mb-2">Service Hours</p>
-                <p className="text-sm text-white">Monday – Friday: 8:00 AM – 6:00 PM</p>
-                <p className="text-sm text-white">Saturday: 9:00 AM – 2:00 PM</p>
+                <p className="text-xs text-slate-400 uppercase tracking-wider font-bold mb-2">{tUi("serviceHours")}</p>
+                <p className="text-sm text-white">{tUi("serviceHoursMF")}</p>
+                <p className="text-sm text-white">{tUi("serviceHoursSat")}</p>
               </div>
 
               {/* CTA */}
@@ -114,7 +115,7 @@ export default function ContactSection() {
                 href={`mailto:theogenentakirutimana04@gmail.com`}
                 className="inline-flex items-center gap-2 bg-[#2BB1E4] text-[#093051] px-7 py-3.5 rounded-xl font-headline font-bold text-sm hover:bg-white transition-colors duration-200 active:scale-95 shrink-0"
               >
-                Send Us an Email
+                {tUi("sendEmail")}
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
