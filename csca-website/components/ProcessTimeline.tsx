@@ -27,8 +27,14 @@ export default function ProcessTimeline() {
 
         {/* Desktop timeline */}
         <div className="hidden md:block relative">
-          {/* Connector line */}
-          <div className="absolute top-10 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#c3c6cf] to-transparent mx-16" />
+          {/* Animated connector line */}
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
+            className="absolute top-10 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#2BB1E4]/40 to-transparent mx-16 origin-left"
+          />
 
           <div className="grid grid-cols-5 gap-6">
             {steps.map((step, i) => (
@@ -37,14 +43,13 @@ export default function ProcessTimeline() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.12 }}
+                transition={{ duration: 0.5, delay: 0.15 + i * 0.13 }}
                 className="flex flex-col items-center text-center group"
               >
                 {/* Step circle */}
-                <div className="relative z-10 w-20 h-20 rounded-2xl bg-white border-2 border-[#c3c6cf] group-hover:border-[#2BB1E4] group-hover:bg-[#093051] transition-all duration-300 flex flex-col items-center justify-center mb-6 shadow-sm group-hover:shadow-lg">
-                  <span className="text-[#2BB1E4] text-xs font-bold uppercase tracking-widest mb-1">Step</span>
-                  <span className="text-2xl font-black font-headline text-[#093051] group-hover:text-white transition-colors duration-300">
-                    {i + 1}
+                <div className="relative z-10 w-20 h-20 rounded-2xl bg-white border-2 border-[#c3c6cf] group-hover:border-[#2BB1E4] group-hover:bg-[#093051] transition-all duration-300 flex items-center justify-center mb-6 shadow-sm group-hover:shadow-[0_8px_30px_rgba(43,177,228,0.25)]">
+                  <span className="text-3xl font-black font-headline text-[#093051] group-hover:text-[#2BB1E4] transition-colors duration-300 leading-none">
+                    {String(i + 1).padStart(2, "0")}
                   </span>
                 </div>
                 <h3 className="font-headline font-bold text-[#093051] mb-3 text-base">{step.title}</h3>
