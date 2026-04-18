@@ -8,7 +8,7 @@
     "getQuote": "Baza igiciro"
   },
   "hero": {
-    "headline": "Tuzobereye mu gutanga serivisi zo kuranga no kugurisha Amazu n'ibibanza, ubwubatsi no gukodesha imodoka i Kigali, Rwanda",
+    "headline": "TUZOBEREYE MU GUTANGA SERIVISI ZO KURANGA NO KUGURISHA AMAZU N'IBIBANZA, UBWUBATSI NO GUKODESHA IMODOKA I KIGALI, RWANDA",
     "subheadline": "Construction Supply and Commission Agent Ltd itanga serivisi zizewe mu kuranga Amazu n'ibibanza, ubwubatsi, no gukodesha imodoka — ifasha abantu bwite n'ibigo by'ubucuruzi guteza imbere imirimo yabo.",
     "cta_primary": "Baza igiciro",
     "cta_secondary": "Twandikire"
@@ -34,8 +34,8 @@
       ]
     },
     "construction": {
-      "title": "Ibikoresho by'Ubwubatsi",
-      "description": "Gushakisha ibikoresho by'ubwubatsi biringaniye bishimwe n'abatuza b'inzobere ku isi hose.",
+      "title": "Ubwubatsi",
+      "description": "Gushakisha ibikoresho byiza no gutanga ibikoresho by'ubwubatsi biva ku bakora ibikoresho byiza ku isi hose",
       "items": [
         "Ubujyanama mu bikorwa by'ubwubatsi",
         "Gushakisha no gutanga ibikoresho by'ubwubatsi",
@@ -52,7 +52,6 @@
         "items": [
           "Gukodesha imodoka mu gihe kigufi n'igihe kirekire",
           "Gukodesha imodoka ku bikorwa by'ubucuruzi n'ibikorwa bwite"
-          
         ]
       },
       "leasing": {

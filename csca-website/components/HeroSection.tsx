@@ -53,8 +53,6 @@ export default function HeroSection() {
           className="text-5xl md:text-4xl lg:text-5xl xl:text-6xl font-headline font-extrabold tracking-tight leading-[1.05] text-white"
         >
           {t("headline").split("Kigali")[0]}
-          <span className="text-[#2BB1E4]"> Kigali</span>
-          {t("headline").split("Kigali")[1]}
         </motion.h1>
 
         {/* Subheadline */}
