@@ -115,21 +115,21 @@ export default function HeroSection() {
           } hidden xl:flex items-center gap-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-4 py-2`}
         >
           <span className="w-1.5 h-1.5 rounded-full bg-[#2BB1E4] shrink-0" />
-          <span className="text-white/60 text-xs font-semibold tracking-wide whitespace-nowrap">
+          <span className="text-[#7dd3fc]/85 text-xs font-semibold tracking-wide whitespace-nowrap">
             {chip.label}
           </span>
         </motion.div>
       ))}
 
       {/* ── Content ──────────────────────────────────────────────────────── */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto px-6 py-36 flex flex-col items-center text-center gap-8">
+      <div className="relative z-10 w-full max-w-5xl mx-auto px-6 py-24 sm:py-32 flex flex-col items-center text-center gap-6 sm:gap-8">
 
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: -14, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.55, delay: 0.1 }}
-          className="inline-flex items-center gap-2.5 bg-[#2BB1E4]/10 border border-[#2BB1E4]/30 rounded-full px-5 py-2 backdrop-blur-sm"
+          className="inline-flex items-center gap-2.5 bg-[#2BB1E4]/15 border border-[#2BB1E4]/50 rounded-full px-5 py-2 backdrop-blur-sm"
         >
           <span className="relative flex h-2 w-2 shrink-0">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#2BB1E4] opacity-60" />
@@ -141,22 +141,29 @@ export default function HeroSection() {
         </motion.div>
 
         {/* Headline — word-by-word blur reveal */}
-        <h1 className="text-5xl md:text-6xl xl:text-8xl font-headline font-extrabold tracking-tight leading-[1.04] text-white max-w-4xl [text-shadow:0_0_80px_rgba(43,177,228,0.18)]">
-          {words.map((word, i) => (
-            <motion.span
-              key={i}
-              className="inline-block mr-[0.2em] last:mr-0"
-              initial={{ opacity: 0, y: 32, filter: "blur(12px)" }}
-              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              transition={{
-                duration: 0.58,
-                delay: 0.22 + i * 0.044,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-            >
-              {word}
-            </motion.span>
-          ))}
+        <h1 className="text-[1.9rem] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-headline font-extrabold tracking-tight leading-[1.08] max-w-4xl">
+          {words.map((word, i) => {
+            const isAccent = i >= words.length - 2;
+            return (
+              <motion.span
+                key={i}
+                className={`inline-block mr-[0.2em] last:mr-0 ${
+                  isAccent
+                    ? "text-[#2BB1E4] [text-shadow:0_0_55px_rgba(43,177,228,0.95)]"
+                    : "text-white [text-shadow:0_2px_30px_rgba(0,0,0,0.5)]"
+                }`}
+                initial={{ opacity: 0, y: 28, filter: "blur(12px)" }}
+                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                transition={{
+                  duration: 0.58,
+                  delay: 0.22 + i * 0.044,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+              >
+                {word}
+              </motion.span>
+            );
+          })}
         </h1>
 
         {/* Accent divider */}
@@ -172,7 +179,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, delay: 0.95 }}
-          className="text-lg md:text-xl text-slate-300/80 max-w-2xl leading-relaxed"
+          className="text-sm sm:text-base md:text-lg text-[#b8e8f8] max-w-2xl leading-relaxed"
         >
           {t("subheadline")}
         </motion.p>
@@ -230,10 +237,10 @@ export default function HeroSection() {
               {i > 0 && (
                 <div className="absolute left-0 top-1/2 -translate-y-1/2 h-10 w-px bg-white/12" />
               )}
-              <div className="text-4xl md:text-5xl font-headline font-black text-[#2BB1E4] tabular-nums leading-none">
+              <span className="block text-3xl sm:text-4xl font-headline font-black tabular-nums leading-none bg-linear-to-br from-[#2BB1E4] to-[#7dd3fc] bg-clip-text text-transparent">
                 <CountUp end={stat.end} suffix={stat.suffix} startDelay={1500 + i * 130} />
-              </div>
-              <div className="text-[10px] text-slate-400/90 uppercase tracking-[0.18em] mt-2 leading-snug">
+              </span>
+              <div className="text-[9px] sm:text-[10px] text-slate-400 uppercase tracking-[0.18em] mt-2 leading-snug">
                 {stat.label}
               </div>
             </div>
