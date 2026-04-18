@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { FaLinkedinIn, FaFacebookF, FaWhatsapp } from "react-icons/fa";
+import Image from "next/image";
 
 const footerLinks = [
   { href: "#hero", label: "Home" },
@@ -22,9 +23,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-[#2BB1E4] rounded flex items-center justify-center">
-                <span className="text-[#093051] text-xs font-black font-headline">C</span>
-              </div>
+              <Image
+                src="/csca.jpeg"
+                alt="CSCA Ltd logo"
+                width={40}
+                height={40}
+                className="rounded object-contain"
+              />
               <span className="text-xl font-black font-headline tracking-tight">CSCA Ltd</span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed max-w-xs">{t("tagline")}</p>

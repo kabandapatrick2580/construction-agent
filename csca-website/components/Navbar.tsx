@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const localeLabels: Record<string, string> = {
   en: "EN",
@@ -67,9 +68,13 @@ export default function Navbar({ locale }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <a href="#hero" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 bg-[#093051] rounded flex items-center justify-center">
-            <span className="text-white text-xs font-black font-headline">C</span>
-          </div>
+          <Image
+            src="/csca.jpeg"
+            alt="CSCA Ltd logo"
+            width={60}
+            height={60}
+            className="rounded object-contain"
+          />
           <span className="text-xl font-black text-[#093051] font-headline tracking-tight">
             CSCA Ltd
           </span>
