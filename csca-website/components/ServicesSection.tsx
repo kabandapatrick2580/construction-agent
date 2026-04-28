@@ -21,61 +21,49 @@ const fadeUp = {
 /* ── Image sets per service ─────────────────────────────────────────────── */
 const realEstateSlides = [
   {
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCwmZvAsrCzC7Rq69Tasu7i5AWDSgpj_rjSduqXuoFb2iEoscIFq6yBVtCGvT1Z6Etwh502aBzMV0CWb7fwUu5_j6zHoM8rJUHvKmnEWwKa1r0xhCAix-OXZRjsTD0jmhJUvy3VMZFqUX09aMx8SZcgcJuQErPUCqF2L6LP8wOmscl6TwBw9Db6bJ6Ue7FiLldFgyh3D0DjAZH6tm-624QIeZtyB8v7qfq9NPriB-znByMkoSRN7F_wFaxXoJCv3MutlJN6cYBrvsT0",
-    alt: "Modern commercial building in Kigali",
+    src: "/building_2_story.jpeg",
+    alt: "Two-storey residential building — Kigali",
   },
   {
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCCUFNTAUCBY1TgJUJKa5q6KIZF0KINyZIXIXwUUNF4_N4OPyMT7UtLTaaf1ojEtTcTdq98WBwszeps1Hyl4fbcGZiLwEFEHk-wghSybC0kc4V-_Gs2N-dEUTdpONsuG9bodXzNSoZzs4xFPfvK4f2eIvpw6RUKySYsgoM4dFJ1kaJsK8_1Unrk5FSlrBx4DL0xDEOJsko562dzCRMh03VnMlx07qLRTbJwkJFM23CTBF1ZkFoJB07uoVYpqLgiJzf6iU35NTCkg_iR",
-    alt: "Contemporary architecture facade",
-  },
-  {
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuB9g-wV6x9QIaOfdi17YYW4agPKcvmLN9Nzr8jktL2xv_hYzxUDH3f-Nt4JAfUgZaXWxcv7q3MPFO3oUdrA35u_5MuE3BXBs15a9RLkD3AqK5ZgGp9-curD6BfMZNwD6kNj0SJbvLU-lKAKnO9dYUW2sf3axGj53Y3cZla_X11QTYN7POHi9EYVw90drD_Mh8lcDy6EC7pZe_qOu9iMYJGTblPnewwLUdxMmp7uhvw0Kb1D3rW0huVYTthKQ0r5xP0fWqSiqpQ2Y9Zf",
-    alt: "Steel structure — real estate development",
-  },
+    src: "/cons_4.webp",
+    alt: "House property for sale in Rwanda",
+  }
 ];
 
 const constructionSlides = [
   {
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDN6lBdMK49GgITv7vixwwwbhEIFMgJT3oauEjXZhUvb_CvbdbAk127OaiCgBkaVDnZ9OLKqRDPEe2nh0czQO_CCY3aalcOTfHz2ITicnqMuC-eqHh7EwrRDtVobidOvjvFx6kbA8zV4t6bNXz9ubN6JGSkASDyBrpNiMBXDNlOTbt0sqOHm8VBH4SZZMRz61Gr3hq9eoApWAP4FTNzfklnKpqaOO9RjhPvznUaPG4xu4Lg0AFRoPHaE_ciJIkGTIjgXn356m4q_Qnt",
+    src: "/cons_1.webp",
     alt: "Construction worker reviewing blueprints",
   },
   {
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCCUFNTAUCBY1TgJUJKa5q6KIZF0KINyZIXIXwUUNF4_N4OPyMT7UtLTaaf1ojEtTcTdq98WBwszeps1Hyl4fbcGZiLwEFEHk-wghSybC0kc4V-_Gs2N-dEUTdpONsuG9bodXzNSoZzs4xFPfvK4f2eIvpw6RUKySYsgoM4dFJ1kaJsK8_1Unrk5FSlrBx4DL0xDEOJsko562dzCRMh03VnMlx07qLRTbJwkJFM23CTBF1ZkFoJB07uoVYpqLgiJzf6iU35NTCkg_iR",
+    src: "/cons_2.webp",
     alt: "Building under construction",
   },
   {
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuB9g-wV6x9QIaOfdi17YYW4agPKcvmLN9Nzr8jktL2xv_hYzxUDH3f-Nt4JAfUgZaXWxcv7q3MPFO3oUdrA35u_5MuE3BXBs15a9RLkD3AqK5ZgGp9-curD6BfMZNwD6kNj0SJbvLU-lKAKnO9dYUW2sf3axGj53Y3cZla_X11QTYN7POHi9EYVw90drD_Mh8lcDy6EC7pZe_qOu9iMYJGTblPnewwLUdxMmp7uhvw0Kb1D3rW0huVYTthKQ0r5xP0fWqSiqpQ2Y9Zf",
+    src: "/cons_3.webp",
     alt: "Construction materials and supply chain",
   },
 ];
 
 const vehicleSlides = [
   {
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCwmZvAsrCzC7Rq69Tasu7i5AWDSgpj_rjSduqXuoFb2iEoscIFq6yBVtCGvT1Z6Etwh502aBzMV0CWb7fwUu5_j6zHoM8rJUHvKmnEWwKa1r0xhCAix-OXZRjsTD0jmhJUvy3VMZFqUX09aMx8SZcgcJuQErPUCqF2L6LP8wOmscl6TwBw9Db6bJ6Ue7FiLldFgyh3D0DjAZH6tm-624QIeZtyB8v7qfq9NPriB-znByMkoSRN7F_wFaxXoJCv3MutlJN6cYBrvsT0",
-    alt: "Professional vehicle fleet",
+    src: "/sedan.webp",
+    alt: "Sedan — available for rental in Kigali",
   },
   {
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDN6lBdMK49GgITv7vixwwwbhEIFMgJT3oauEjXZhUvb_CvbdbAk127OaiCgBkaVDnZ9OLKqRDPEe2nh0czQO_CCY3aalcOTfHz2ITicnqMuC-eqHh7EwrRDtVobidOvjvFx6kbA8zV4t6bNXz9ubN6JGSkASDyBrpNiMBXDNlOTbt0sqOHm8VBH4SZZMRz61Gr3hq9eoApWAP4FTNzfklnKpqaOO9RjhPvznUaPG4xu4Lg0AFRoPHaE_ciJIkGTIjgXn356m4q_Qnt",
-    alt: "Business vehicle rental Kigali",
-  },
-  {
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCCUFNTAUCBY1TgJUJKa5q6KIZF0KINyZIXIXwUUNF4_N4OPyMT7UtLTaaf1ojEtTcTdq98WBwszeps1Hyl4fbcGZiLwEFEHk-wghSybC0kc4V-_Gs2N-dEUTdpONsuG9bodXzNSoZzs4xFPfvK4f2eIvpw6RUKySYsgoM4dFJ1kaJsK8_1Unrk5FSlrBx4DL0xDEOJsko562dzCRMh03VnMlx07qLRTbJwkJFM23CTBF1ZkFoJB07uoVYpqLgiJzf6iU35NTCkg_iR",
-    alt: "Corporate fleet leasing solutions",
+    src: "/SUV_shot_in_202604272250.webp",
+    alt: "SUV — corporate and long-term leasing",
   },
 ];
 
 const landMappingSlides = [
   {
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuB9g-wV6x9QIaOfdi17YYW4agPKcvmLN9Nzr8jktL2xv_hYzxUDH3f-Nt4JAfUgZaXWxcv7q3MPFO3oUdrA35u_5MuE3BXBs15a9RLkD3AqK5ZgGp9-curD6BfMZNwD6kNj0SJbvLU-lKAKnO9dYUW2sf3axGj53Y3cZla_X11QTYN7POHi9EYVw90drD_Mh8lcDy6EC7pZe_qOu9iMYJGTblPnewwLUdxMmp7uhvw0Kb1D3rW0huVYTthKQ0r5xP0fWqSiqpQ2Y9Zf",
-    alt: "Land surveying and parcel mapping",
+    src: "/parcel.webp",
+    alt: "Land parcel — property listing Rwanda",
   },
   {
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCwmZvAsrCzC7Rq69Tasu7i5AWDSgpj_rjSduqXuoFb2iEoscIFq6yBVtCGvT1Z6Etwh502aBzMV0CWb7fwUu5_j6zHoM8rJUHvKmnEWwKa1r0xhCAix-OXZRjsTD0jmhJUvy3VMZFqUX09aMx8SZcgcJuQErPUCqF2L6LP8wOmscl6TwBw9Db6bJ6Ue7FiLldFgyh3D0DjAZH6tm-624QIeZtyB8v7qfq9NPriB-znByMkoSRN7F_wFaxXoJCv3MutlJN6cYBrvsT0",
+    src: "/parcel_2.webp",
     alt: "Topographic site analysis Rwanda",
-  },
-  {
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDN6lBdMK49GgITv7vixwwwbhEIFMgJT3oauEjXZhUvb_CvbdbAk127OaiCgBkaVDnZ9OLKqRDPEe2nh0czQO_CCY3aalcOTfHz2ITicnqMuC-eqHh7EwrRDtVobidOvjvFx6kbA8zV4t6bNXz9ubN6JGSkASDyBrpNiMBXDNlOTbt0sqOHm8VBH4SZZMRz61Gr3hq9eoApWAP4FTNzfklnKpqaOO9RjhPvznUaPG4xu4Lg0AFRoPHaE_ciJIkGTIjgXn356m4q_Qnt",
-    alt: "Property boundary verification",
   },
 ];
 
