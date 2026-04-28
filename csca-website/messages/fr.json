@@ -37,11 +37,10 @@
       "title": "Fournitures de construction",
       "description": "Approvisionnement en matériaux premium et composants structurels auprès d'un réseau mondial de fournisseurs vérifiés.",
       "items": [
-        "Support aux projets de construction",
-        "Approvisionnement et fourniture de matériaux de construction",
-        "Coordination des entrepreneurs",
-        "Assistance à la supervision de chantier",
-        "Support à la planification de projets"
+        "Consultation architecturale et d'ingénierie",
+        "Autorisation de construction et approvisionnement en matériaux",
+        "Installation électricité et eau",
+        "Construction de routes"
       ]
     },
     "vehicle": {
@@ -67,6 +66,19 @@
         "Location de voitures à court et long terme",
         "Solutions de crédit-bail de flotte",
         "Forfaits de location et crédit-bail flexibles"
+      ]
+    },
+    "landMapping": {
+      "title": "Cartographie foncière",
+      "description": "Services complets de cartographie et d'arpentage foncier pour soutenir le développement immobilier et les projets de construction.",
+      "items": [
+        "Subdivision foncière et cartographie des parcelles",
+        "Première immatriculation et assistance au titre foncier",
+        "Correction de superficie et vérification des limites",
+        "Levés topographiques et analyse de sites",
+        "Documentation des coordonnées GPS et du cadastre",
+        "Vérification de la conformité d'utilisation des terres et du zonage",
+        "Assistance à la résolution des litiges fonciers"
       ]
     }
   },
@@ -194,6 +206,7 @@
     "video2Title": "Fournitures de Construction & Support de Projet",
     "video2Desc": "Voyez comment nous sourçons des matériaux de construction premium et coordonnons les projets.",
     "video3Title": "Solutions de Location et Crédit-bail",
-    "video3Desc": "Explorez nos forfaits flexibles de location de véhicules et de crédit-bail à long terme."
+    "video3Desc": "Explorez nos forfaits flexibles de location de véhicules et de crédit-bail à long terme.",
+    "enquireLandMapping": "Renseignez-vous sur la Cartographie Foncière"
   }
 }

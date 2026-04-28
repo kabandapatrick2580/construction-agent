@@ -3,13 +3,6 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import {
-  MdLocationOn,
-  MdGavel,
-  MdHandshake,
-  MdVerified,
-  MdAnalytics,
-  MdPayments,
-  MdTaskAlt,
   MdDirectionsCar,
   MdAccessTime,
   MdBusinessCenter,
@@ -71,6 +64,21 @@ const vehicleSlides = [
   },
 ];
 
+const landMappingSlides = [
+  {
+    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuB9g-wV6x9QIaOfdi17YYW4agPKcvmLN9Nzr8jktL2xv_hYzxUDH3f-Nt4JAfUgZaXWxcv7q3MPFO3oUdrA35u_5MuE3BXBs15a9RLkD3AqK5ZgGp9-curD6BfMZNwD6kNj0SJbvLU-lKAKnO9dYUW2sf3axGj53Y3cZla_X11QTYN7POHi9EYVw90drD_Mh8lcDy6EC7pZe_qOu9iMYJGTblPnewwLUdxMmp7uhvw0Kb1D3rW0huVYTthKQ0r5xP0fWqSiqpQ2Y9Zf",
+    alt: "Land surveying and parcel mapping",
+  },
+  {
+    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCwmZvAsrCzC7Rq69Tasu7i5AWDSgpj_rjSduqXuoFb2iEoscIFq6yBVtCGvT1Z6Etwh502aBzMV0CWb7fwUu5_j6zHoM8rJUHvKmnEWwKa1r0xhCAix-OXZRjsTD0jmhJUvy3VMZFqUX09aMx8SZcgcJuQErPUCqF2L6LP8wOmscl6TwBw9Db6bJ6Ue7FiLldFgyh3D0DjAZH6tm-624QIeZtyB8v7qfq9NPriB-znByMkoSRN7F_wFaxXoJCv3MutlJN6cYBrvsT0",
+    alt: "Topographic site analysis Rwanda",
+  },
+  {
+    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDN6lBdMK49GgITv7vixwwwbhEIFMgJT3oauEjXZhUvb_CvbdbAk127OaiCgBkaVDnZ9OLKqRDPEe2nh0czQO_CCY3aalcOTfHz2ITicnqMuC-eqHh7EwrRDtVobidOvjvFx6kbA8zV4t6bNXz9ubN6JGSkASDyBrpNiMBXDNlOTbt0sqOHm8VBH4SZZMRz61Gr3hq9eoApWAP4FTNzfklnKpqaOO9RjhPvznUaPG4xu4Lg0AFRoPHaE_ciJIkGTIjgXn356m4q_Qnt",
+    alt: "Property boundary verification",
+  },
+];
+
 /* ── Summary cards ──────────────────────────────────────────────────────── */
 const serviceCards = [
   {
@@ -96,6 +104,14 @@ const serviceCards = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l2 2h8a2 2 0 002-2z" />
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 16V9h4l3 5v2h-1" />
+      </svg>
+    ),
+  },
+  {
+    key: "landMapping",
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
       </svg>
     ),
   },
@@ -129,7 +145,7 @@ export default function ServicesSection() {
         </motion.div>
 
         {/* ── Summary Cards ──────────────────────────────────────────────── */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 mb-20">
           {serviceCards.map((service, i) => (
             <motion.div
               key={service.key}
@@ -144,14 +160,11 @@ export default function ServicesSection() {
               <div className="w-16 h-16 bg-[#093051] text-white flex items-center justify-center rounded-xl mb-8 group-hover:bg-[#2BB1E4] transition-colors duration-300">
                 {service.icon}
               </div>
-              <h3 className="text-2xl font-headline font-bold text-[#093051] mb-4">
+              <h3 className="text-2xl font-headline font-bold text-[#093051] mb-6">
                 {t(`${service.key}.title`)}
               </h3>
-              <p className="text-[#43474e] leading-relaxed mb-6">
-                {t(`${service.key}.description`)}
-              </p>
               <ul className="space-y-3">
-                {(t.raw(`${service.key}.items`) as string[]).slice(0, 3).map((item: string) => (
+                {(t.raw(`${service.key}.items`) as string[]).map((item: string) => (
                   <li key={item} className="flex items-start gap-3 text-sm font-medium text-[#1a1c1c]">
                     <svg className="w-5 h-5 text-[#2BB1E4] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -186,25 +199,16 @@ export default function ServicesSection() {
             <h2 className="text-3xl font-headline font-extrabold text-[#093051]">
               {t("realEstate.title")}
             </h2>
-            <p className="text-[#43474e] leading-relaxed">
-              {tUi("realEstateDetailDesc")}
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {[
-                { icon: <MdLocationOn className="w-5 h-5" />, title: tUi("marketAnalysis"), desc: tUi("marketAnalysisDesc") },
-                { icon: <MdGavel className="w-5 h-5" />, title: tUi("legalCompliance"), desc: tUi("legalComplianceDesc") },
-                { icon: <MdHandshake className="w-5 h-5" />, title: tUi("jointVentures"), desc: tUi("jointVenturesDesc") },
-                { icon: <MdVerified className="w-5 h-5" />, title: tUi("qualityAudit"), desc: tUi("qualityAuditDesc") },
-              ].map((item) => (
-                <div key={item.title} className="flex gap-3">
-                  <span className="text-[#2BB1E4] shrink-0 mt-0.5">{item.icon}</span>
-                  <div>
-                    <h4 className="font-bold text-[#093051] text-sm">{item.title}</h4>
-                    <p className="text-xs text-[#43474e] mt-0.5">{item.desc}</p>
-                  </div>
-                </div>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
+              {(t.raw("realEstate.items") as string[]).map((item: string) => (
+                <li key={item} className="flex items-start gap-3 text-sm font-medium text-[#1a1c1c]">
+                  <svg className="w-5 h-5 text-[#2BB1E4] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  {item}
+                </li>
               ))}
-            </div>
+            </ul>
             <a
               href="#contact"
               className="inline-flex items-center gap-2 bg-[#093051] text-white px-6 py-3 rounded-xl font-headline font-bold text-sm hover:bg-[#2BB1E4] transition-colors duration-200"
@@ -231,26 +235,16 @@ export default function ServicesSection() {
             <h2 className="text-3xl font-headline font-extrabold text-[#093051]">
               {t("construction.title")}
             </h2>
-            <p className="text-[#43474e] leading-relaxed">
-              {tUi("constructionDetailDesc")}
-            </p>
-            <div className="space-y-3">
-              {[
-                { label: tUi("advancedTracking"), icon: <MdAnalytics className="w-5 h-5" /> },
-                { label: tUi("bulkPricing"), icon: <MdPayments className="w-5 h-5" /> },
-                { label: tUi("regulatoryCert"), icon: <MdTaskAlt className="w-5 h-5" /> },
-              ].map((item) => (
-                <div
-                  key={item.label}
-                  className="bg-white p-5 rounded-xl border-l-4 border-[#2BB1E4] flex justify-between items-center shadow-sm hover:shadow-md transition-all group cursor-default"
-                >
-                  <span className="font-bold text-[#093051]">{item.label}</span>
-                  <span className="text-[#2BB1E4] group-hover:translate-x-1 transition-transform duration-200">
-                    {item.icon}
-                  </span>
-                </div>
+            <ul className="space-y-3">
+              {(t.raw("construction.items") as string[]).map((item: string) => (
+                <li key={item} className="flex items-start gap-3 text-sm font-medium text-[#1a1c1c]">
+                  <svg className="w-5 h-5 text-[#2BB1E4] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  {item}
+                </li>
               ))}
-            </div>
+            </ul>
             <a
               href="#contact"
               className="inline-flex items-center gap-2 bg-[#093051] text-white px-6 py-3 rounded-xl font-headline font-bold text-sm hover:bg-[#2BB1E4] transition-colors duration-200"
@@ -295,7 +289,6 @@ export default function ServicesSection() {
               <h2 className="text-3xl font-headline font-extrabold text-[#093051]">
                 {t("vehicle.title")}
               </h2>
-              <p className="text-[#43474e] leading-relaxed">{t("vehicle.description")}</p>
 
               {/* Rental & Leasing sub-sections */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -363,6 +356,52 @@ export default function ServicesSection() {
                 </svg>
               </a>
             </div>
+          </div>
+        </motion.div>
+
+        {/* ── Land Mapping Detail ───────────────────────────────────────── */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center py-12 border-t border-[#e2e2e2]"
+        >
+          {/* Text — left on desktop */}
+          <div className="order-2 lg:order-1 space-y-6">
+            <div className="w-12 h-[2px] bg-[#2BB1E4]" />
+            <h2 className="text-3xl font-headline font-extrabold text-[#093051]">
+              {t("landMapping.title")}
+            </h2>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
+              {(t.raw("landMapping.items") as string[]).map((item: string) => (
+                <li key={item} className="flex items-start gap-3 text-sm font-medium text-[#1a1c1c]">
+                  <svg className="w-5 h-5 text-[#2BB1E4] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 bg-[#093051] text-white px-6 py-3 rounded-xl font-headline font-bold text-sm hover:bg-[#2BB1E4] transition-colors duration-200"
+            >
+              {tUi("enquireLandMapping")}
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+
+          {/* Carousel — right on desktop */}
+          <div className="order-1 lg:order-2">
+            <ServiceCarousel
+              slides={landMappingSlides}
+              interval={4800}
+              badge={{ value: "100+", label: tUi("projectsCompleted") }}
+              aspectClass="h-[400px]"
+            />
           </div>
         </motion.div>
 

@@ -20,7 +20,7 @@
   },
   "services": {
     "title": "Serivisi Zacu",
-    "subtitle": "Ibisubizo bihuye n'ibikenewe",
+    "subtitle": "Ibisubizo bihuye n'ibyo ukeneye",
     "label": "Ibyo tuzobereyemo",
     "realEstate": {
       "title": "Kuranga no Kugurisha Amazu n'ibibanza",
@@ -37,11 +37,10 @@
       "title": "Ubwubatsi",
       "description": "Gushakisha ibikoresho byiza no gutanga ibikoresho by'ubwubatsi biva ku bakora ibikoresho byiza ku isi hose",
       "items": [
-        "Ubujyanama mu bikorwa by'ubwubatsi",
-        "Gushakisha no gutanga ibikoresho by'ubwubatsi",
-        "Guhuza n'abakora imirimo",
-        "Kugenzura akazi kuri site z'ubwubatsi",
-        "Inkunga mu gutegura imishinga"
+        "Gukora ibishushanyo by'amazu",
+        "Gushaka ibyangobwa byo kubaka",
+        "Gukora installation y'amashanyarazi n'amazi",
+        "Gukora imihanda"
       ]
     },
     "vehicle": {
@@ -66,6 +65,18 @@
         "Gukodesha imodoka mu gihe gigufi n'igihe kirekire",
         "Ibisubizo by'amasezerano y'ingasi y'imodoka",
         "Amasezerano y'itangwa ahuye n'ibikenewe"
+      ]
+    },
+    "landMapping": {
+      "title": "Gupima ubutaka",
+      "description": "Gupima ubutaka",
+      "items": [
+        "Gupima ubutaka",
+        "Kubarura ubutaka",
+        "Gukosora Ubuso n'imbibi z'ubutaka",
+        "Gushushanya Amakarita y'ubutaka",
+        "Inyandiko z'aho ibibanza biri (GPS) no gutanga impapuro z'ibibanza",
+        "Gufasha gukemura amakimbirane ajyanye n'imbibi z'ubutaka"
       ]
     }
   },
@@ -193,6 +204,7 @@
     "video2Title": "Ibikoresho by'Ubwubatsi & Inkunga ku Mishinga",
     "video2Desc": "Reba uburyo dushakisha ibikoresho by'ubwubatsi biringaniye no guhuza imishinga.",
     "video3Title": "Ibisubizo byo Gukodesha Imodoka",
-    "video3Desc": "Shakira amasezerano yacu yo gukodesha imodoka by'agateganyo n'ay'igihe kirekire."
+    "video3Desc": "Shakira amasezerano yacu yo gukodesha imodoka by'agateganyo n'ay'igihe kirekire.",
+    "enquireLandMapping": "Baza Ibyerekeye Gupima Ubutaka"
   }
 }

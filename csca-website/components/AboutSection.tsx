@@ -30,8 +30,8 @@ export default function AboutSection() {
                 </div>
                 <div className="border-t border-white/20 pt-6 grid grid-cols-3 gap-4 text-center">
                   {[
-                    { v: "15+", l: tUi("years") },
-                    { v: "200+", l: tUi("projects") },
+                    { v: "5+", l: tUi("years") },
+                    { v: "100+", l: tUi("projects") },
                     { v: "3", l: tUi("domains") },
                   ].map((s) => (
                     <div key={s.l}>

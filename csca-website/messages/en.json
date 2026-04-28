@@ -37,11 +37,10 @@
       "title": "Construction Supply",
       "description": "Sourcing premium materials and structural components from a global network of vetted suppliers.",
       "items": [
-        "Construction project support",
-        "Building material sourcing and supply",
-        "Contractor coordination",
-        "Site supervision assistance",
-        "Project planning support"
+        "Architectural and engineering consultation",
+        "Construction Authorization and material procurement",
+        "Electricity & Water Installation",
+        "Roads Construction"
       ]
     },
     "vehicle": {
@@ -54,6 +53,7 @@
           "Business and personal vehicle rental solutions",
           "Flexible rental packages"
         ]
+        
       },
       "leasing": {
         "title": "Car Leasing Services",
@@ -67,6 +67,19 @@
         "Short-term and long-term car rentals",
         "Fleet leasing solutions",
         "Flexible rental & leasing packages"
+      ]
+    },
+    "landMapping": {
+      "title": "Land Mapping",
+      "description": "Comprehensive land mapping and surveying services to support real estate development and construction projects.",
+      "items": [
+        "Land subdivision and parcel mapping",
+        "First registration and title deed support",
+        "Area Correction and boundary verification",
+        "Topographic surveys and site analysis",
+        "GPS coordinates and cadastral documentation",
+        "Land use and zoning compliance verification",
+        "Boundary dispute resolution support"
       ]
     }
   },
@@ -194,6 +207,7 @@
     "video2Title": "Construction Supply & Project Support",
     "video2Desc": "See how we source premium building materials and coordinate construction projects.",
     "video3Title": "Car Rental & Leasing Solutions",
-    "video3Desc": "Explore our flexible vehicle rental and long-term leasing packages for businesses."
+    "video3Desc": "Explore our flexible vehicle rental and long-term leasing packages for businesses.",
+    "enquireLandMapping": "Enquire About Land Mapping"
   }
 }
