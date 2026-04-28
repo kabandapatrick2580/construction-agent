@@ -148,19 +148,12 @@ export default function ServicesSection() {
               <div className="w-16 h-16 bg-[#093051] text-white flex items-center justify-center rounded-xl mb-8 group-hover:bg-[#2BB1E4] transition-colors duration-300">
                 {service.icon}
               </div>
-              <h3 className="text-2xl font-headline font-bold text-[#093051] mb-6">
+              <h3 className="text-xl font-headline font-bold text-[#093051] mb-3">
                 {t(`${service.key}.title`)}
               </h3>
-              <ul className="space-y-3">
-                {(t.raw(`${service.key}.items`) as string[]).map((item: string) => (
-                  <li key={item} className="flex items-start gap-3 text-sm font-medium text-[#1a1c1c]">
-                    <svg className="w-5 h-5 text-[#2BB1E4] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+              <p className="text-sm text-[#43474e] leading-relaxed">
+                {t(`${service.key}.description`)}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -187,6 +180,7 @@ export default function ServicesSection() {
             <h2 className="text-3xl font-headline font-extrabold text-[#093051]">
               {t("realEstate.title")}
             </h2>
+            <p className="text-[#43474e] leading-relaxed">{t("realEstate.description")}</p>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
               {(t.raw("realEstate.items") as string[]).map((item: string) => (
                 <li key={item} className="flex items-start gap-3 text-sm font-medium text-[#1a1c1c]">
@@ -223,6 +217,7 @@ export default function ServicesSection() {
             <h2 className="text-3xl font-headline font-extrabold text-[#093051]">
               {t("construction.title")}
             </h2>
+            <p className="text-[#43474e] leading-relaxed">{t("construction.description")}</p>
             <ul className="space-y-3">
               {(t.raw("construction.items") as string[]).map((item: string) => (
                 <li key={item} className="flex items-start gap-3 text-sm font-medium text-[#1a1c1c]">
@@ -277,6 +272,7 @@ export default function ServicesSection() {
               <h2 className="text-3xl font-headline font-extrabold text-[#093051]">
                 {t("vehicle.title")}
               </h2>
+              <p className="text-[#43474e] leading-relaxed">{t("vehicle.description")}</p>
 
               {/* Rental & Leasing sub-sections */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -361,6 +357,7 @@ export default function ServicesSection() {
             <h2 className="text-3xl font-headline font-extrabold text-[#093051]">
               {t("landMapping.title")}
             </h2>
+            <p className="text-[#43474e] leading-relaxed">{t("landMapping.description")}</p>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
               {(t.raw("landMapping.items") as string[]).map((item: string) => (
                 <li key={item} className="flex items-start gap-3 text-sm font-medium text-[#1a1c1c]">

@@ -69,7 +69,7 @@
     },
     "landMapping": {
       "title": "Gupima ubutaka",
-      "description": "Gupima ubutaka",
+      "description": "Serivisi zuzuye zo gupima no kugenzura ubutaka hagamijwe gushyigikira iterambere ry’imiturire n’imishinga y’ubwubatsi.",
       "items": [
         "Gupima ubutaka",
         "Kubarura ubutaka",
@@ -180,7 +180,7 @@
     "visitYoutube": "Sura Umwanya Wacu kuri YouTube",
     "videosComingSoon": "Amafilime azaboneka umwanya wacu kuri YouTube utangazwa.",
     "watchOnYoutube": "Reba kuri YouTube",
-    "enquireProperties": "Baza Ibyerekeye Imitungo",
+    "enquireProperties": "Baza birambuye",
     "requestQuote": "Baza birambuye",
     "bookVehicle": "Baza birambuye",
     "shortTermRental": "Gukodesha Igihe Gigufi",
@@ -205,6 +205,6 @@
     "video2Desc": "Reba uburyo dushakisha ibikoresho by'ubwubatsi biringaniye no guhuza imishinga.",
     "video3Title": "Ibisubizo byo Gukodesha Imodoka",
     "video3Desc": "Shakira amasezerano yacu yo gukodesha imodoka by'agateganyo n'ay'igihe kirekire.",
-    "enquireLandMapping": "Baza Ibyerekeye Gupima Ubutaka"
+    "enquireLandMapping": "Baza birambuye"
   }
 }
