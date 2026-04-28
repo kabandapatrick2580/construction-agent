@@ -56,6 +56,18 @@ export default function ServiceCarousel({
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
+      {/* Preload next slide so it's ready before the auto-advance fires */}
+      {slides.length > 1 && (
+        <div className="hidden">
+          <Image
+            src={slides[(index + 1) % slides.length].src}
+            alt=""
+            fill
+            sizes="1px"
+          />
+        </div>
+      )}
+
       {/* Slides */}
       <AnimatePresence initial={false} custom={direction} mode="popLayout">
         <motion.div
